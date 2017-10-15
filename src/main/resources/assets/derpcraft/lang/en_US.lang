@@ -2,9 +2,13 @@
 item.ingot_uranium.name=Uranium
 item.gebgetable.name=Gebgetable
 item.gebgetableSeed.name=Gebgetable Seed
+item.gebCarrot.name=Geb Carrot
+item.ingotCopper.name=Copper Ingot
+item.copperSword.name=Copper Sword
 
 # Blocks
 tile.ore_uranium.name=Uranium Ore
+tile.oreCopper.name=Copper Ore
 
 # Misc
 itemGroup.derpcraft=Derp Craft

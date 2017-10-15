@@ -4,6 +4,9 @@ import com.LordGabem.DerpCraft.blocks.ModBlocks;
 import com.LordGabem.DerpCraft.client.DerpCraftTab;
 import com.LordGabem.DerpCraft.item.ModItems;
 import com.LordGabem.DerpCraft.proxy.CommonProxy;
+import com.LordGabem.DerpCraft.recipe.ModRecipes;
+import net.minecraft.item.Item;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -19,6 +22,8 @@ public class DerpCraft
 
     public static final DerpCraftTab creativeTab = new DerpCraftTab();
 
+    public static final Item.ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("COPPER", 2, 500, 6,2, 14);
+
     @SidedProxy(serverSide = "com.LordGabem.DerpCraft.proxy.CommonProxy", clientSide = "com.LordGabem.DerpCraft.proxy.ClientProxy")
     public static CommonProxy proxy;
 
@@ -31,9 +36,10 @@ public class DerpCraft
         ModItems.init();
     }
 
-    @EventHandler
+    @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        ModRecipes.init();
         System.out.println("Initialized: DerpCraft says SKREEEEEEEEE");
     }
 
