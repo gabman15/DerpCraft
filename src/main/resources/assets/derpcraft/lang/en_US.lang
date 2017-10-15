@@ -1,0 +1,10 @@
+# Items
+item.ingot_uranium.name=Uranium
+item.gebgetable.name=Gebgetable
+item.gebgetableSeed.name=Gebgetable Seed
+
+# Blocks
+tile.ore_uranium.name=Uranium Ore
+
+# Misc
+itemGroup.derpcraft=Derp Craft

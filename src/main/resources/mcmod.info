@@ -1,0 +1,16 @@
+[
+{
+  "modid": "derpcraft",
+  "name": "DerpCraft",
+  "description": "A tech mod based on the Doodle Wars.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Lord GabeM"],
+  "credits": "Thanks to Goomy, Max, and Isaac for getting me to do the Doodle War.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["mod_MinecraftForge"]
+}
+]
