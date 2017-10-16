@@ -23,6 +23,13 @@ item.hammer.name=Hammer
 item.dustIron.name=Iron Dust
 item.dustCoal.name=Coal Dust
 item.dustSteel.name=Steel Dust
+item.dustOmnite.name=Omnite Dust
+item.ingotOmnite.name=Omnite Ingot
+item.ingotBronze.name=Bronze Ingot
+item.dustBronze.name=Bronze Dust
+item.dustDerpium.name=Derpium Dust
+item.ingotDerpium.name=Derpium Ingot
+
 
 # Blocks
 tile.ore_uranium.name=Uranium Ore
@@ -31,6 +38,9 @@ tile.oreTin.name=Tin Ore
 tile.blockCopper.name=Copper Block
 tile.blockTin.name=Tin Block
 tile.blockSteel.name=Steel Block
+tile.blockBronze.name=Bronze Block
+tile.blockUranium.name=Uranium Block
+tile.blockOmnite.name=Omnite Block
 
 # Misc
 itemGroup.derpcraft=Derp Craft
