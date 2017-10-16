@@ -8,15 +8,21 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
     //METALS
-    public static ItemBase ingot_uranium;
-    public static ItemBase ingotCopper;
-    public static ItemBase ingotTin;
-    public static ItemBase ingotSteel;
-    public static ItemBase dustIron;
-    public static ItemBase dustCoal;
-    public static ItemBase dustSteel;
-    public static ItemBase dustBronze;
-    public static ItemBase ingotBronze;
+    public static ItemOre ingot_uranium;
+    public static ItemOre ingotCopper;
+    public static ItemOre ingotTin;
+    public static ItemOre ingotSteel;
+    public static ItemOre dustIron;
+    public static ItemOre dustCoal;
+    public static ItemOre dustSteel;
+    public static ItemOre dustBronze;
+    public static ItemOre ingotBronze;
+    public static ItemOre dustOmnite;
+    public static ItemOre ingotOmnite;
+    public static ItemOre dustDerpium;
+    public static ItemOre ingotDerpium;
+    public static ItemOre dustMegaDiamond;
+    public static ItemOre dustDiamond;
 
 
     //CROPS
@@ -45,11 +51,18 @@ public class ModItems {
         ingotCopper = register(new ItemOre("ingotCopper","ingotCopper"));
         ingotTin = register(new ItemOre("ingotTin","ingotTin"));
         ingotSteel = register(new ItemOre("ingotSteel", "ingotSteel"));
-        dustIron = register(new ItemBase("dustIron"));
-        dustCoal = register(new ItemBase("dustCoal"));
-        dustSteel = register(new ItemBase("dustSteel"));
-        dustBronze = register(new ItemBase("dustBronze"));
+        dustIron = register(new ItemOre("dustIron","dustIron"));
+        dustCoal = register(new ItemOre("dustCoal","dustCoal"));
+        dustSteel = register(new ItemOre("dustSteel","dustSteel"));
+        dustBronze = register(new ItemOre("dustBronze","dustBronze"));
         ingotBronze = register(new ItemOre("ingotBronze","ingotBronze"));
+        dustOmnite = register(new ItemOre("dustOmnite","dustOmnite"));
+        ingotOmnite = register(new ItemOre("ingotOmnite","ingotOmnite"));
+        dustDerpium = register(new ItemOre("dustDerpium", "dustDerpium"));
+        ingotDerpium = register(new ItemOre("ingotDerpium", "ingotDerpium"));
+        dustDiamond = register(new ItemOre("dustDiamond", "dustDiamond"));
+        dustMegaDiamond = register(new ItemOre("dustMegaDiamond", "dustMegaDiamond"));
+
         gebgetableSeed = register(new ItemGebgetableSeed());
         gebgetable = register(new ItemGebgetable());
         gebCarrot = register(new ItemGebCarrot());
