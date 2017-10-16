@@ -18,6 +18,15 @@ public class BlockOre extends BlockBase implements ItemOreDict{
         setResistance(5f);
     }
 
+    public BlockOre(Material material, String name, String oreName) {
+        super(material, name);
+
+        this.oreName = oreName;
+
+        setHardness(3f);
+        setResistance(5f);
+    }
+
     @Override
     public void initOreDict() {
         OreDictionary.registerOre(oreName, this);

@@ -5,10 +5,11 @@ import com.LordGabem.DerpCraft.client.DerpCraftTab;
 import com.LordGabem.DerpCraft.item.ModItems;
 import com.LordGabem.DerpCraft.proxy.CommonProxy;
 import com.LordGabem.DerpCraft.recipe.ModRecipes;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -23,6 +24,11 @@ public class DerpCraft
     public static final DerpCraftTab creativeTab = new DerpCraftTab();
 
     public static final Item.ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("COPPER", 2, 500, 6,2, 14);
+
+    public static final ItemArmor.ArmorMaterial copperArmorMaterial = EnumHelper.addArmorMaterial("COPPER", MODID + ":copper", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+
+    public static final ItemArmor.ArmorMaterial hazmatArmorMaterial = EnumHelper.addArmorMaterial("HAZMAT", MODID + ":hazmatsuit", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+
 
     @SidedProxy(serverSide = "com.LordGabem.DerpCraft.proxy.CommonProxy", clientSide = "com.LordGabem.DerpCraft.proxy.ClientProxy")
     public static CommonProxy proxy;
