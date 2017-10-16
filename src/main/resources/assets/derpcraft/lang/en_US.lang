@@ -5,10 +5,32 @@ item.gebgetableSeed.name=Gebgetable Seed
 item.gebCarrot.name=Geb Carrot
 item.ingotCopper.name=Copper Ingot
 item.copperSword.name=Copper Sword
+item.copperPickaxe.name=Copper Pickaxe
+item.copperAxe.name=Copper Axe
+item.copperShovel.name=Copper Shovel
+item.copperHoe.name=Copper Hoe
+item.copperHelmet.name=Copper Helmet
+item.copperChestplate.name=Copper Chestplate
+item.copperLeggings.name=Copper Leggings
+item.copperBoots.name=Hazmat Boots
+item.hazmatHelmet.name=Hazmat Mask
+item.hazmatChestplate.name=Hazmat Suit
+item.hazmatLeggings.name=Hazmat Pants
+item.copperBoots.name=Hazmat Boots
+item.ingotTin.name=Tin Ingot
+item.ingotSteel.name=Steel Ingot
+item.hammer.name=Hammer
+item.dustIron.name=Iron Dust
+item.dustCoal.name=Coal Dust
+item.dustSteel.name=Steel Dust
 
 # Blocks
 tile.ore_uranium.name=Uranium Ore
 tile.oreCopper.name=Copper Ore
+tile.oreTin.name=Tin Ore
+tile.blockCopper.name=Copper Block
+tile.blockTin.name=Tin Block
+tile.blockSteel.name=Steel Block
 
 # Misc
 itemGroup.derpcraft=Derp Craft
