@@ -23,6 +23,10 @@ public class ModItems {
     public static ItemOre ingotDerpium;
     public static ItemOre dustMegaDiamond;
     public static ItemOre dustDiamond;
+    public static ItemBase megaDiamond;
+    public static ItemBase pureMaterial;
+    public static ItemBase fiberSweatshirt;
+    public static ItemBase pieceSweatshirt;
 
 
     //CROPS
@@ -45,6 +49,7 @@ public class ModItems {
     public static ItemArmor hazmatLeggings;
     public static ItemArmor hazmatBoots;
     public static ItemBase hammer;
+    public static ItemSword theStick;
 
     public static void init() {
         ingot_uranium = register(new ItemOre("ingot_uranium","ingotUranium"));
@@ -62,6 +67,10 @@ public class ModItems {
         ingotDerpium = register(new ItemOre("ingotDerpium", "ingotDerpium"));
         dustDiamond = register(new ItemOre("dustDiamond", "dustDiamond"));
         dustMegaDiamond = register(new ItemOre("dustMegaDiamond", "dustMegaDiamond"));
+        megaDiamond = register(new ItemBase("megaDiamond"));
+        pureMaterial = register(new ItemBase("pureMaterial"));
+        fiberSweatshirt = register(new ItemBase("fiberSweatshirt"));
+        pieceSweatshirt = register(new ItemBase("pieceSweatshirt"));
 
         gebgetableSeed = register(new ItemGebgetableSeed());
         gebgetable = register(new ItemGebgetable());
@@ -71,6 +80,7 @@ public class ModItems {
         copperAxe = register(new ItemAxe(DerpCraft.copperToolMaterial,"copperAxe"));
         copperShovel = register(new ItemShovel(DerpCraft.copperToolMaterial, "copperShovel"));
         copperHoe = register(new ItemHoe(DerpCraft.copperToolMaterial, "copperHoe"));
+
         copperHelmet = register(new ItemArmor(DerpCraft.copperArmorMaterial, EntityEquipmentSlot.HEAD, "copperHelmet"));
         copperChestplate = register(new ItemArmor(DerpCraft.copperArmorMaterial, EntityEquipmentSlot.CHEST, "copperChestplate"));
         copperLeggings = register(new ItemArmor(DerpCraft.copperArmorMaterial, EntityEquipmentSlot.LEGS, "copperLeggings"));

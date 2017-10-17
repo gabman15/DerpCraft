@@ -6,6 +6,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModRecipes {
@@ -39,10 +40,16 @@ public class ModRecipes {
                 new ItemStack(ModItems.hammer.setContainerItem(ModItems.hammer))
         );
         GameRegistry.addShapedRecipe(new ItemStack(ModItems.dustMegaDiamond),
-                " l ",
+                "glg",
                 "ldl",
-                " l ",
-                'd', ModItems.dustDiamond, 'l', Items.DYE
+                "glg",
+                'd', ModItems.dustDiamond, 'l', new ItemStack(Items.DYE,1,4), 'g', Items.GLOWSTONE_DUST
+        );
+        GameRegistry.addShapedRecipe(new ItemStack(ModItems.pureMaterial),
+                "ooo",
+                "omo",
+                "ooo",
+                'o', ModItems.ingotOmnite, 'm', ModItems.megaDiamond
         );
         GameRegistry.addShapedRecipe(new ItemStack(ModItems.dustDerpium),
                 "ddd",
@@ -62,5 +69,6 @@ public class ModRecipes {
         GameRegistry.addSmelting(ModItems.dustSteel, new ItemStack(ModItems.ingotSteel), .7f);
         GameRegistry.addSmelting(ModItems.dustBronze, new ItemStack(ModItems.ingotBronze), .7f);
         GameRegistry.addSmelting(ModItems.dustOmnite, new ItemStack(ModItems.ingotOmnite), .7f);
+        GameRegistry.addSmelting(ModItems.dustMegaDiamond, new ItemStack(ModItems.megaDiamond), .7f);
     }
 }
