@@ -29,6 +29,12 @@ item.ingotBronze.name=Bronze Ingot
 item.dustBronze.name=Bronze Dust
 item.dustDerpium.name=Derpium Dust
 item.ingotDerpium.name=Derpium Ingot
+item.dustDiamond.name=Diamond Dust
+item.dustMegaDiamond.name=Mega Diamond Dust
+item.megaDiamond.name=Mega Diamond
+item.pureMaterial.name=Pure Material
+item.fiberSweatshirt.name=Green Sweatshirt Fiber
+item.pieceSweatshirt.name=Green Sweatshirt Piece
 
 
 # Blocks
