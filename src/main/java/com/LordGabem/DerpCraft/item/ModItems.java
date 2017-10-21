@@ -2,8 +2,11 @@ package com.LordGabem.DerpCraft.item;
 
 import com.LordGabem.DerpCraft.DerpCraft;
 import com.LordGabem.DerpCraft.item.tool.*;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentDamage;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
@@ -49,7 +52,8 @@ public class ModItems {
     public static ItemArmor hazmatLeggings;
     public static ItemArmor hazmatBoots;
     public static ItemBase hammer;
-    public static ItemSword theStick;
+    public static ItemBase theStick;
+    public static ItemArmor greenSweatshirt;
 
     public static void init() {
         ingot_uranium = register(new ItemOre("ingot_uranium","ingotUranium"));
@@ -80,6 +84,8 @@ public class ModItems {
         copperAxe = register(new ItemAxe(DerpCraft.copperToolMaterial,"copperAxe"));
         copperShovel = register(new ItemShovel(DerpCraft.copperToolMaterial, "copperShovel"));
         copperHoe = register(new ItemHoe(DerpCraft.copperToolMaterial, "copperHoe"));
+        theStick = register(new ItemBase("theStick"));
+
 
         copperHelmet = register(new ItemArmor(DerpCraft.copperArmorMaterial, EntityEquipmentSlot.HEAD, "copperHelmet"));
         copperChestplate = register(new ItemArmor(DerpCraft.copperArmorMaterial, EntityEquipmentSlot.CHEST, "copperChestplate"));
@@ -90,6 +96,7 @@ public class ModItems {
         hazmatLeggings = register(new ItemArmor(DerpCraft.copperArmorMaterial, EntityEquipmentSlot.LEGS, "hazmatLeggings"));
         hazmatBoots = register(new ItemArmor(DerpCraft.hazmatArmorMaterial, EntityEquipmentSlot.FEET, "hazmatBoots"));
         hammer = register(new ItemBase("hammer"));
+        greenSweatshirt = register(new ItemArmor(DerpCraft.sweatshirtArmorMaterial, EntityEquipmentSlot.CHEST, "greenSweatshirt"));
     }
 
     private static <T extends Item> T register(T item) {

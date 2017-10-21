@@ -2,11 +2,12 @@ package com.LordGabem.DerpCraft.recipe;
 
 import com.LordGabem.DerpCraft.blocks.ModBlocks;
 import com.LordGabem.DerpCraft.item.ModItems;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModRecipes {
@@ -19,6 +20,32 @@ public class ModRecipes {
                      "CGC",
                      " C ",
                      'C', Items.CARROT, 'G', ModItems.gebgetable
+        );
+
+        //TOOLS
+        ItemStack stick = new ItemStack(ModItems.theStick, 1, 0);
+        NBTTagCompound tag = new NBTTagCompound();
+
+
+
+        if (!stick.getTagCompound().hasKey("ench", 9))
+        {
+            stick.getTagCompound().setShort("ench", new NBTTagList());
+        }
+
+        NBTTagList nbttaglist = new NBTTagList();
+        nbttaglist = stick.getTagCompound().getTagList("ench", 10);
+        NBTTagCompound nbttagcompound = new NBTTagCompound();
+        nbttagcompound.setShort("id", (short)16);
+        nbttagcompound.setShort("lvl", (short)(1000);
+        nbttaglist.appendTag(nbttagcompound);
+        //stick.addEnchantment(Enchantment.getEnchantmentByID(16),1000);
+        GameRegistry.addShapedRecipe
+            (stick,
+            "sds",
+            "sps",
+            "sds",
+            's',Items.STICK, 'd', ModItems.ingotDerpium, 'p',ModItems.pureMaterial
         );
         //BLOCKS
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockCopper),"aaa","aaa","aaa",'a',ModItems.ingotCopper);
@@ -52,10 +79,22 @@ public class ModRecipes {
                 'o', ModItems.ingotOmnite, 'm', ModItems.megaDiamond
         );
         GameRegistry.addShapedRecipe(new ItemStack(ModItems.dustDerpium),
-                "ddd",
-                "OdU",
-                "ddd",
-                'd', Blocks.DIAMOND_BLOCK, 'O', ModBlocks.blockOmnite, 'U', ModBlocks.blockUranium
+                "pup",
+                "uhu",
+                "pup",
+                'p', ModItems.pureMaterial, 'u', ModItems.ingot_uranium, 'h', new ItemStack(ModItems.hammer.setContainerItem(ModItems.hammer))
+        );
+        GameRegistry.addShapedRecipe(new ItemStack(ModItems.fiberSweatshirt),
+                "gsg",
+                "gdg",
+                "gsg",
+                'g', new ItemStack(Items.DYE,1,2), 's', Items.STRING, 'd', ModItems.ingotDerpium
+        );
+        GameRegistry.addShapedRecipe(new ItemStack(ModItems.pieceSweatshirt),
+                "fef",
+                "fdf",
+                "fef",
+                'f', ModItems.fiberSweatshirt, 'e', Items.SPIDER_EYE, 'd', ModItems.ingotDerpium
         );
         //ALLOYING
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustSteel,2), ModItems.dustCoal, ModItems.dustIron);
@@ -70,5 +109,6 @@ public class ModRecipes {
         GameRegistry.addSmelting(ModItems.dustBronze, new ItemStack(ModItems.ingotBronze), .7f);
         GameRegistry.addSmelting(ModItems.dustOmnite, new ItemStack(ModItems.ingotOmnite), .7f);
         GameRegistry.addSmelting(ModItems.dustMegaDiamond, new ItemStack(ModItems.megaDiamond), .7f);
+        GameRegistry.addSmelting(ModItems.dustDerpium, new ItemStack(ModItems.ingotDerpium), 1f);
     }
 }

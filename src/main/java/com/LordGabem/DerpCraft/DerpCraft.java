@@ -24,10 +24,10 @@ public class DerpCraft
     public static final DerpCraftTab creativeTab = new DerpCraftTab();
 
     public static final Item.ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("COPPER", 2, 500, 6,2, 14);
-    public static final Item.ToolMaterial stickToolMaterial = EnumHelper.addToolMaterial("STICK", 2, 90000, 6,90000, 50);
+    //public static final Item.ToolMaterial stickToolMaterial = EnumHelper.addToolMaterial("STICK", 2, -1, 6,1, 50);
 
     public static final ItemArmor.ArmorMaterial copperArmorMaterial = EnumHelper.addArmorMaterial("COPPER", MODID + ":copper", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-
+    public static final ItemArmor.ArmorMaterial sweatshirtArmorMaterial = EnumHelper.addArmorMaterial("SWEATSHIRT", MODID + ":sweatshirt", 50, new int[]{50, 50, 50, 50}, 30, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 20.0F);
     public static final ItemArmor.ArmorMaterial hazmatArmorMaterial = EnumHelper.addArmorMaterial("HAZMAT", MODID + ":hazmatsuit", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
 
     @SidedProxy(serverSide = "com.LordGabem.DerpCraft.proxy.CommonProxy", clientSide = "com.LordGabem.DerpCraft.proxy.ClientProxy")
@@ -48,6 +48,8 @@ public class DerpCraft
         ModRecipes.init();
         System.out.println("Initialized: DerpCraft says SKREEEEEEEEE");
     }
+
+
 
 
 }
