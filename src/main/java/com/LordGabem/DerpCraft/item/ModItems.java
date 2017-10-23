@@ -53,7 +53,7 @@ public class ModItems {
     public static ItemArmor hazmatBoots;
     public static ItemBase hammer;
     public static ItemBase theStick;
-    public static ItemArmor greenSweatshirt;
+    public static GreenSweatshirt greenSweatshirt;
 
     public static void init() {
         ingot_uranium = register(new ItemOre("ingot_uranium","ingotUranium"));
@@ -96,7 +96,7 @@ public class ModItems {
         hazmatLeggings = register(new ItemArmor(DerpCraft.copperArmorMaterial, EntityEquipmentSlot.LEGS, "hazmatLeggings"));
         hazmatBoots = register(new ItemArmor(DerpCraft.hazmatArmorMaterial, EntityEquipmentSlot.FEET, "hazmatBoots"));
         hammer = register(new ItemBase("hammer"));
-        greenSweatshirt = register(new ItemArmor(DerpCraft.sweatshirtArmorMaterial, EntityEquipmentSlot.CHEST, "greenSweatshirt"));
+        greenSweatshirt = register(new GreenSweatshirt());
     }
 
     private static <T extends Item> T register(T item) {
@@ -111,4 +111,6 @@ public class ModItems {
 
         return item;
     }
+
+
 }

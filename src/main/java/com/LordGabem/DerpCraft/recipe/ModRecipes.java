@@ -12,6 +12,32 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModRecipes {
 
+    public static NBTTagCompound addEnchantToList(int id, int lvl) {
+
+
+        NBTTagCompound tag = new NBTTagCompound();
+        tag.setShort("id", (short)id);
+        tag.setShort("lvl", (short)(lvl));
+
+
+        return tag;
+    }
+
+    public static NBTTagCompound getEnchCompound(int[] ids, int[] lvl) {
+        if(ids.length==lvl.length) {
+            NBTTagCompound comp = new NBTTagCompound();
+            NBTTagList tagList = new NBTTagList();
+            for (int i = 0; i < ids.length; i++) {
+                tagList.appendTag(addEnchantToList(ids[i], lvl[i]));
+            }
+
+            comp.setTag("ench", tagList);
+
+            return comp;
+        }
+        return null;
+    }
+
     public static void init() {
         //CROPS
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.gebgetableSeed), ModItems.gebgetable);
@@ -24,22 +50,9 @@ public class ModRecipes {
 
         //TOOLS
         ItemStack stick = new ItemStack(ModItems.theStick, 1, 0);
-        NBTTagCompound tag = new NBTTagCompound();
 
+        stick.setTagCompound(getEnchCompound(new int[] {16,19,20}, new int[]{10000,10000,10000}));
 
-
-        if (!stick.getTagCompound().hasKey("ench", 9))
-        {
-            stick.getTagCompound().setShort("ench", new NBTTagList());
-        }
-
-        NBTTagList nbttaglist = new NBTTagList();
-        nbttaglist = stick.getTagCompound().getTagList("ench", 10);
-        NBTTagCompound nbttagcompound = new NBTTagCompound();
-        nbttagcompound.setShort("id", (short)16);
-        nbttagcompound.setShort("lvl", (short)(1000);
-        nbttaglist.appendTag(nbttagcompound);
-        //stick.addEnchantment(Enchantment.getEnchantmentByID(16),1000);
         GameRegistry.addShapedRecipe
             (stick,
             "sds",
@@ -96,12 +109,18 @@ public class ModRecipes {
                 "fef",
                 'f', ModItems.fiberSweatshirt, 'e', Items.SPIDER_EYE, 'd', ModItems.ingotDerpium
         );
+        GameRegistry.addShapedRecipe(new ItemStack(ModItems.greenSweatshirt),
+                "fef",
+                "fdf",
+                "fef",
+                'f', ModItems.fiberSweatshirt, 'e', Items.SPIDER_EYE, 'd', ModItems.ingotDerpium
+        );
         //ALLOYING
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustSteel,2), ModItems.dustCoal, ModItems.dustIron);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustBronze,2), ModItems.gebgetable, ModItems.dustIron);
 
         //SMELTING
-        GameRegistry.addSmelting(ModBlocks.ore_uranium, new ItemStack(ModItems.ingot_uranium), 1f);
+        GameRegistry.addSmelting(ModBlocks.oreUranium, new ItemStack(ModItems.ingot_uranium), 1f);
         GameRegistry.addSmelting(ModBlocks.oreCopper, new ItemStack(ModItems.ingotCopper), .7f);
         GameRegistry.addSmelting(ModBlocks.oreTin, new ItemStack(ModItems.ingotTin), .7f);
         GameRegistry.addSmelting(ModItems.dustIron, new ItemStack(Items.IRON_INGOT), .7f);

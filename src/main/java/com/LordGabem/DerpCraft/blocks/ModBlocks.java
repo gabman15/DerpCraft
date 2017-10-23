@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
 
-    public static BlockOre ore_uranium;
+    public static BlockOre oreUranium;
     public static BlockOre oreCopper;
     public static BlockOre oreTin;
     public static BlockOre blockCopper;
@@ -22,7 +22,7 @@ public class ModBlocks {
     public static BlockCropGebgetable cropGebgetable;
 
     public static void init() {
-        ore_uranium = register(new BlockOre("ore_uranium","oreUranium"));
+        oreUranium = register(new BlockOre("oreUranium","oreUranium"));
         oreCopper = register(new BlockOre("oreCopper","oreCopper"));
         oreTin = register(new BlockOre("oreTin","oreTin"));
         blockCopper = register(new BlockOre(Material.IRON,"blockCopper","blockCopper"));

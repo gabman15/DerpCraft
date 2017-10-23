@@ -19,4 +19,6 @@ public class ItemArmor extends net.minecraft.item.ItemArmor implements ItemModel
     public void registerItemModel(Item item) {
         DerpCraft.proxy.registerItemRenderer(this,0,name);
     }
+
+
 }

@@ -2,12 +2,14 @@ package com.LordGabem.DerpCraft;
 
 import com.LordGabem.DerpCraft.blocks.ModBlocks;
 import com.LordGabem.DerpCraft.client.DerpCraftTab;
+import com.LordGabem.DerpCraft.event.GebEventHandler;
 import com.LordGabem.DerpCraft.item.ModItems;
 import com.LordGabem.DerpCraft.proxy.CommonProxy;
 import com.LordGabem.DerpCraft.recipe.ModRecipes;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -49,7 +51,10 @@ public class DerpCraft
         System.out.println("Initialized: DerpCraft says SKREEEEEEEEE");
     }
 
-
+    @Mod.EventHandler
+    public void load(FMLInitializationEvent event) {
+        MinecraftForge.EVENT_BUS.register(new GebEventHandler());
+    }
 
 
 }
