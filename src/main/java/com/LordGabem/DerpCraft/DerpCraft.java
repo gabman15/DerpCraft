@@ -19,6 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = DerpCraft.MODID, name = DerpCraft.name, version = DerpCraft.VERSION)
 public class DerpCraft
 {
+    public static int i=0;
     public static final String MODID = "derpcraft";
     public static final String name = "Derp Craft";
     public static final String VERSION = "1.0";
@@ -29,7 +30,7 @@ public class DerpCraft
     //public static final Item.ToolMaterial stickToolMaterial = EnumHelper.addToolMaterial("STICK", 2, -1, 6,1, 50);
 
     public static final ItemArmor.ArmorMaterial copperArmorMaterial = EnumHelper.addArmorMaterial("COPPER", MODID + ":copper", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-    public static final ItemArmor.ArmorMaterial sweatshirtArmorMaterial = EnumHelper.addArmorMaterial("SWEATSHIRT", MODID + ":sweatshirt", 50, new int[]{50, 50, 50, 50}, 30, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 20.0F);
+    public static final ItemArmor.ArmorMaterial sweatshirtArmorMaterial = EnumHelper.addArmorMaterial("SWEATSHIRT", MODID + ":sweatshirt", -1, new int[]{50, 50, 50, 50}, 30, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 20.0F);
     public static final ItemArmor.ArmorMaterial hazmatArmorMaterial = EnumHelper.addArmorMaterial("HAZMAT", MODID + ":hazmatsuit", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
 
     @SidedProxy(serverSide = "com.LordGabem.DerpCraft.proxy.CommonProxy", clientSide = "com.LordGabem.DerpCraft.proxy.ClientProxy")

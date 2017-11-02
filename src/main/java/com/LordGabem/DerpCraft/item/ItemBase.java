@@ -35,6 +35,7 @@ public class ItemBase extends Item implements ItemModelProvider{
     @Override
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
     {
+        System.out.println(ItemArmor.radiationProtected);
         return new ActionResult(EnumActionResult.PASS, itemStackIn);
     }
 }

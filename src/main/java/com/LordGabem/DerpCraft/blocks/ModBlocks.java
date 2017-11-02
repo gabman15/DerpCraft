@@ -18,6 +18,7 @@ public class ModBlocks {
     public static BlockOre blockBronze;
     public static BlockOre blockUranium;
     public static BlockOre blockOmnite;
+    public static BlockOre blockDerpium;
 
     public static BlockCropGebgetable cropGebgetable;
 
@@ -32,6 +33,7 @@ public class ModBlocks {
         blockBronze = register(new BlockOre(Material.IRON, "blockBronze","blockBronze"));
         blockUranium = register(new BlockOre(Material.IRON, "blockUranium", "blockUranium"));
         blockOmnite = register(new BlockOre(Material.IRON, "blockOmnite","blockOmnite"));
+        blockDerpium = register(new BlockOre(Material.IRON, "blockDerpium", "blockDerpium"));
     }
 
     private static <T extends Block> T register(T block, ItemBlock itemBlock) {
